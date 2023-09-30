@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 
+
+const UserRoutes = require('./routes/userRoutes');
+
 const app = express();
 
 //Config JSON response
@@ -19,6 +22,7 @@ app.use(express.static('public'));
 
 
 //Routes
+app.use('/user', UserRoutes);
 
 
 app.listen(5000)
